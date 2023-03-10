@@ -19,7 +19,7 @@ form.addEventListener("submit", (e) => {
 
     const errors = [];
 
-    const errorMessage = () => {
+    const errorMessage = (errors) => {
         errors.forEach((item) => {
             item.tipo.classList.remove("d-none");
             item.tipo.textContent = item.msg;
@@ -56,10 +56,10 @@ form.addEventListener("submit", (e) => {
         inputEmail.classList.add("is-valid");
     }
 
-    if (errors !== 0) {
+    if (errors != 0) {
         errorMessage(errors);
         return;
-    };
+    }
 
     successMessage()
     
